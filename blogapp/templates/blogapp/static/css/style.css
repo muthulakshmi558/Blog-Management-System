@@ -1,0 +1,39 @@
+/* General */
+body {
+  background-color: #f5f6fa;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Navbar */
+.navbar {
+  background: #4B69A9;
+}
+.navbar-brand, .nav-link {
+  color: #fff !important;
+  font-weight: 500;
+}
+
+/* Container */
+.container {
+  margin-top: 40px;
+}
+
+/* Footer */
+footer {
+  background: #4B69A9;
+  color: white;
+  padding: 15px 0;
+  margin-top: 50px;
+  text-align: center;
+}
+
+/* Card design */
+.card {
+  border-radius: 12px;
+  box-shadow: 0px 2px 8px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 4px 12px rgba(0,0,0,0.2);
+}

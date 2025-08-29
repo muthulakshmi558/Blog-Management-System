@@ -1,0 +1,14 @@
+{% extends 'blogapp/Layout/base.html' %}
+{% block title %}{{ object.title }}{% endblock %}
+{% block content %}
+  <div class="card p-4">
+    <h2>{{ object.title }}</h2>
+    <p class="text-muted">By {{ object.author }} | {{ object.created_at|date:"M d, Y" }}</p>
+    <p>{{ object.content }}</p>
+
+    {% if user == object.author %}
+      <a href="{% url 'post-update' object.pk %}" class="btn btn-warning">✏️ Edit</a>
+      <a href="{% url 'post-delete' object.pk %}" class="btn btn-danger">🗑️ Delete</a>
+    {% endif %}
+  </div>
+{% endblock %}
