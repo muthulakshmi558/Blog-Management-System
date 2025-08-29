@@ -115,7 +115,22 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
 
-STATIC_URL = 'static/'
+import os
+from pathlib import Path
+
+# Base directory
+BASE_DIR = Path(__file__).resolve().parent.parent
+
+# Static files (CSS, JavaScript, Images)
+STATIC_URL = '/static/'
+
+# Add this line 👇 (for Render collectstatic)
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+# Optional: Additional static dirs
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'static'),
+]
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
